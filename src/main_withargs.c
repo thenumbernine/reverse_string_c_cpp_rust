@@ -1,6 +1,6 @@
 #include <stdio.h>
-int main() {
-	char s[] = "Let's take LeetCode contest";
+int main(int argc, char** argv) {
+	char * s = argv[1];
 	char *l = s, *r = s;
 	while (*l) {
 		for (; *r && *r != ' '; ++r);
