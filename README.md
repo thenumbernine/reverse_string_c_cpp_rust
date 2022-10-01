@@ -1,18 +1,27 @@
 Results with hard-coded strings:
 ```
-/usr/bin/time --verbose ./c.out
+/usr/bin/time --verbose ./c.hardcoded.out
 	Maximum resident set size (kbytes): 1320
-/usr/bin/time --verbose ./rust.out
-	Maximum resident set size (kbytes): 2032
-/usr/bin/time --verbose ./cpp.out
-	Maximum resident set size (kbytes): 3580
+/usr/bin/time --verbose ./rust.hardcoded.out
+	Maximum resident set size (kbytes): 1968
+/usr/bin/time --verbose ./cpp.hardcoded.out
+	Maximum resident set size (kbytes): 3460
+/usr/bin/time --verbose ./c.withargs.out "Let's take LeetCode contest"
+	Maximum resident set size (kbytes): 1336
+/usr/bin/time --verbose ./rust.withargs.out "Let's take LeetCode contest"
+	Maximum resident set size (kbytes): 2144
+/usr/bin/time --verbose ./cpp.withargs.out "Let's take LeetCode contest"
+	Maximum resident set size (kbytes): 3592
 ```
 
 binary sizes with hard-coded strings:
 ```
--rwxrwxr-x 1 chris chris    16000 Sep 23 13:08 c.out
--rwxrwxr-x 1 chris chris    17144 Sep 23 13:08 cpp.out
--rwxrwxr-x 1 chris chris 10724888 Sep 23 13:08 rust.out
+-rwxrwxr-x 1 chris chris    16016 Oct  1 16:54 c.hardcoded.out
+-rwxrwxr-x 1 chris chris    15960 Oct  1 16:54 c.withargs.out
+-rwxrwxr-x 1 chris chris    17144 Oct  1 16:52 cpp.hardcoded.out
+-rwxrwxr-x 1 chris chris    17016 Oct  1 16:57 cpp.withargs.out
+-rwxrwxr-x 1 chris chris 11306944 Oct  1 16:52 rust.hardcoded.out
+-rwxrwxr-x 1 chris chris 11326720 Oct  1 16:58 rust.withargs.out
 ```
 
 Aux information:
